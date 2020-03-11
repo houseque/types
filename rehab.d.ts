@@ -15,7 +15,7 @@ export interface RehabStateInstance {
 
   /**
    * How long will the rehab take?
-   * @unit {Days}
+   * @unit {Months}
    */
   duration?: number;
   /**

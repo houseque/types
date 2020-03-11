@@ -27,11 +27,25 @@ export interface Mortgage {
   paymentFrequency?: number;
   interestOnly?: boolean;
   closingCosts?: number;
+  /**
+   * Generally based on another loan, but this gives us flexibility
+   */
+  amount?: number;
   term?: number;
   downPayment: number;
   rate: number;
   financeClosingCosts?: boolean;
   refinance?: Refinance | null;
+
+  /**
+   * How many months before you take out the loan?
+   */
+  financeAfter?: number;
+
+  /**
+   * Some lenders, and hard money lenders allow you to borrow against the ARV
+   */
+  borrowAgainstArv?: boolean;
 }
 
 export interface Refinance extends Mortgage {
